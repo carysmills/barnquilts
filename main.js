@@ -89,14 +89,14 @@ function getRowWidth(index) {
     const thirdColumn = [6, 7, 8];
 
     if (firstColumn.includes(index)) {
-        return 70;
+        return 50;
     } else if (secondColumn.includes(index)) {
-        return 140;
+        return 120;
     }
     else if (thirdColumn.includes(index)) {
-        return 210;
+        return 190;
     } else {
-        return 280;
+        return 260;
     }
 }
 
@@ -160,11 +160,11 @@ d3.json('./data.json', (error, data) => {
             .attr("opacity", 1);
 
         polygons
+            .attr("fill", (_, i) => getQuiltFill(i))
             .transition()
             .duration(600)
             .ease("elastic")
             .attr("points", (_, i) => getQuiltPoints(i))
-            .attr("fill", (_, i) => getQuiltFill(i))
 
         d3.selectAll('text.location').attr("opacity", 0)
 
