@@ -203,9 +203,9 @@ d3.json('./data.json', (error, data) => {
         const { quilts } = data;
         const numQuilts = quilts.length;
 
-        const height = 10;
+        const height = 20;
         const startingX = 150;
-        const startingY = index * 17.5;
+        const startingY = index * 27.5;
         const width = startingX + numQuilts * 3;
         const bottom = startingY + height;
 
@@ -234,16 +234,16 @@ d3.json('./data.json', (error, data) => {
             .duration(600)
             .attr("text-anchor", "end")
             .attr("dx", 140)
-            .attr("dy", (d, i) => (i * 17) + 12)
+            .attr("dy", (d, i) => (i * 28) + 12)
 
     }
 
 
 
-    function scroll(n, offset, func1, func2) {
+    function scroll(element, offset, func1, func2) {
         return new Waypoint({
-            element: document.getElementById(n),
-            handler: function (direction) {
+            element: document.getElementById(element),
+            handler:  (direction) => {
                 direction == 'down' ? func1() : func2();
             },
             offset: offset
@@ -252,8 +252,8 @@ d3.json('./data.json', (error, data) => {
 
 
 
-    new scroll('div4', '75%', divide, quilt);
-    new scroll('div6', '75%', barChart, divide);
+    new scroll('content2', '75%', divide, quilt);
+    new scroll('content3', '75%', barChart, divide);
 
     quilt();
 });

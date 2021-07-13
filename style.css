@@ -33,7 +33,7 @@ text {
 }
 
 .textContainer div {
-    height: 100%;
+    min-height: 100%;
     padding: 0 45px;
 }
 
@@ -41,6 +41,10 @@ text {
     position: fixed;
     height: 500px;
     top: 100px;
+}
+
+#content4 {
+    min-height: calc(100% - 100px);
 }
 
 @media(max-width: 650px) {
@@ -54,7 +58,7 @@ text {
     }
 
     .textContainer div {
-        height: 300px;
+        height: 800px;
     }
 
     .fixed {
@@ -64,9 +68,11 @@ text {
         display: flex;
         justify-content: center;
         left: 0;
+        padding-top: 20px;
     }
 
     svg {
         margin-left: 0;
     }
+
 }
