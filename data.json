@@ -5,42 +5,42 @@
           {
              "name":"Big Island Tomatoes",
              "theme":"Geometry",
-             "address":"North Big Island Road"
+             "location":[-77.24510735102379, 44.13211368100839]
           },
           {
              "name":"Big Island Mariner’s Star",
              "theme":"Stars",
-             "address":"North Big Island Road"
+             "location":[-77.24510735102379, 44.13211368100839]
           },
           {
              "name":"Dutchman’s Puzzle",
              "theme":"Triangles",
-             "address":"1384 North Big Island Road"
+             "location":[-77.2237998021707, 44.13491988072706]
           },
           {
              "name":"Autumn Tulips",
              "theme":"Tulips",
-             "address":"213 Gommorah Road, Demorestville"
+             "location":[-77.22736355984426, 44.09208276448115]
           },
           {
              "name":"Pride of Canada",
              "theme":"Canada",
-             "address":"568 Bethel Road"
+             "location":[-77.20995840217358, 44.05765099291696]
           },
           {
              "name":"Star on the Millenium Trail",
              "theme":"Geometry",
-             "address":"Picton Golf Course"
+             "location":[-77.13519135984647, 44.031229715208646]
           },
           {
              "name":"Meadow Star Blue & Gold",
              "theme":"Geometry",
-             "address":"130 Sidney Shores"
+             "address":[-77.08259643100823, 44.09392027729374]
           },
           {
              "name":"Grey Star",
              "theme":"Stars",
-             "address":"600 Fishlake Road"
+             "address":[-77.17413440824245, 44.126577320213876]
           }
        ]
     },

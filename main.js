@@ -110,6 +110,49 @@ function getDividedPoints(data, index) {
 d3.json('./data.json').then((data) => {
     if (data == null) return;
 
+    const svg = d3.select("svg");
+
+    function map() {
+        d3.selectAll('text.location').transition().attr("opacity", 0);
+        polygons.transition().attr("opacity", 0);
+        d3.selectAll('circle.mapPoint').transition().attr("opacity", 1);
+
+        d3.json("./pec.json").then((mapData) => {
+
+            const projection = d3.geoMercator()
+                .center([-77.20941801372084, 44.012799505137885])
+                .scale(20000)
+                .translate([500 / 2, 500 / 2]);
+
+
+            svg.append("path")
+                .datum(topojson.feature(mapData, mapData.objects.gcd_000b11a_e))
+                .attr("d", d3.geoPath().projection(projection))
+                .transition()
+                .attr("stroke", "black")
+                .attr("stroke-width", 0.5)
+                .attr("fill", "none")
+                .attr("opacity", 1)
+                .attr("transform", "translate(-100, -100)").attr('class', 'map');
+
+            const mapPointData = data.map(({ quilts }) => quilts).flat().filter(({ location }) => location != null);
+
+            svg.selectAll("circle.mapPoint")
+                .data(mapPointData)
+                .enter()
+                .append("circle")
+                .transition()
+                .attr("opacity", 1)
+                .attr("cx", d => projection(d.location)[0])
+                .attr("cy", d => projection(d.location)[1])
+                .attr("r", 2)
+                .attr("transform", "translate(-100, -100)").attr('class', 'mapPoint');
+
+        });
+    }
+
+
+
 
     const myColor = d3.scaleLinear().domain([0, 25])
         .range(["rgb(246, 134, 116)", "rgb(197, 62, 53)"])
@@ -118,8 +161,6 @@ d3.json('./data.json').then((data) => {
     data.sort(function (x, y) {
         return d3.descending(x.quilts.length, y.quilts.length);
     })
-
-    const svg = d3.select("svg");
 
     const quiltContainer = svg.append("rect");
     const stem = svg.append("path");
@@ -163,9 +204,10 @@ d3.json('./data.json').then((data) => {
             .transition()
             .duration(600)
             .ease(d3.easeElastic)
+            .attr("opacity", 1)
             .attr("points", (_, i) => getQuiltPoints(i))
 
-        d3.selectAll('text.location').attr("opacity", 0)
+        d3.selectAll('text.location').transition().attr("opacity", 0)
 
     }
 
@@ -216,6 +258,10 @@ d3.json('./data.json').then((data) => {
 
 
     const barChart = () => {
+
+        d3.selectAll('path.map').transition().attr("opacity", 0);
+        d3.selectAll('circle.mapPoint').transition().attr("opacity", 0);
+
         polygons
             .attr("rx", 0)
             .attr("ry", 0)
@@ -231,6 +277,7 @@ d3.json('./data.json').then((data) => {
             .transition()
             .delay((_, i) => 20 * i)
             .duration(600)
+            .attr("opacity", 1)
             .attr("text-anchor", "end")
             .attr("dx", 140)
             .attr("dy", (d, i) => (i * 28) + 12)
@@ -242,7 +289,7 @@ d3.json('./data.json').then((data) => {
     function scroll(element, offset, func1, func2) {
         return new Waypoint({
             element: document.getElementById(element),
-            handler:  (direction) => {
+            handler: (direction) => {
                 direction == 'down' ? func1() : func2();
             },
             offset: offset
@@ -253,6 +300,8 @@ d3.json('./data.json').then((data) => {
 
     new scroll('content2', '75%', divide, quilt);
     new scroll('content3', '75%', barChart, divide);
+    new scroll('content4', '75%', map, barChart);
+
 
     quilt();
 });
