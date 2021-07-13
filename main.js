@@ -107,12 +107,11 @@ function getDividedPoints(data, index) {
     return calculateStarPoints(getRowWidth(index), getRowHeight(index), numberOfQuilts, 15, 7);
 }
 
+d3.json('./data.json').then((data) => {
+    if (data == null) return;
 
-d3.json('./data.json', (error, data) => {
-    if (data == null || error) return;
 
-
-    const myColor = d3.scale.linear().domain([0, 25])
+    const myColor = d3.scaleLinear().domain([0, 25])
         .range(["rgb(246, 134, 116)", "rgb(197, 62, 53)"])
 
 
@@ -163,7 +162,7 @@ d3.json('./data.json', (error, data) => {
             .attr("fill", (_, i) => getQuiltFill(i))
             .transition()
             .duration(600)
-            .ease("elastic")
+            .ease(d3.easeElastic)
             .attr("points", (_, i) => getQuiltPoints(i))
 
         d3.selectAll('text.location').attr("opacity", 0)
@@ -184,7 +183,7 @@ d3.json('./data.json', (error, data) => {
             .transition()
             .delay((_, i) => 100 * i)
             .duration(800)
-            .ease("elastic")
+            .ease(d3.easeElastic)
             .attr("points", (d, i) => getDividedPoints(d, i))
             .attr("fill", (d) => myColor(d.quilts.length))
 
