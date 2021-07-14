@@ -1,3 +1,6 @@
+const width = 320;
+const height = 500;
+
 function calculateStarPoints(centerX, centerY, arms, outerRadius, innerRadius) {
     let results = "";
 
@@ -115,25 +118,27 @@ d3.json('./data.json').then((data) => {
     function map() {
         d3.selectAll('text.location').transition().attr("opacity", 0);
         polygons.transition().attr("opacity", 0);
-        d3.selectAll('circle.mapPoint').transition().attr("opacity", 1);
+        d3.selectAll('circle.mapPoint').transition().attr("opacity", 0.8);
 
         d3.json("./pec.json").then((mapData) => {
 
             const projection = d3.geoMercator()
                 .center([-77.20941801372084, 44.012799505137885])
                 .scale(20000)
-                .translate([500 / 2, 500 / 2]);
+                .translate([width / 2, height / 4]);
 
 
             svg.append("path")
                 .datum(topojson.feature(mapData, mapData.objects.gcd_000b11a_e))
                 .attr("d", d3.geoPath().projection(projection))
                 .transition()
+                .duration(600)
+                .ease(d3.easeLinear)
                 .attr("stroke", "black")
                 .attr("stroke-width", 0.5)
                 .attr("fill", "none")
                 .attr("opacity", 1)
-                .attr("transform", "translate(-100, -100)").attr('class', 'map');
+                .attr('class', 'map');
 
             const mapPointData = data.map(({ quilts }) => quilts).flat().filter(({ location }) => location != null);
 
@@ -141,12 +146,15 @@ d3.json('./data.json').then((data) => {
                 .data(mapPointData)
                 .enter()
                 .append("circle")
+                .attr("cx", d => { return projection(d.location)[0] })
+                .attr("cy", d => { return projection(d.location)[1] })
                 .transition()
-                .attr("opacity", 1)
-                .attr("cx", d => projection(d.location)[0])
-                .attr("cy", d => projection(d.location)[1])
+                .duration(600)
+                .ease(d3.easeLinear)
+                .attr("opacity", 0.8)
                 .attr("r", 2)
-                .attr("transform", "translate(-100, -100)").attr('class', 'mapPoint');
+                .attr("fill", "rgb(175, 78, 87)")
+                .attr('class', 'mapPoint')
 
         });
     }
