@@ -115,10 +115,15 @@ d3.json('./data.json').then((data) => {
 
     const svg = d3.select("svg");
 
+    const tooltip = d3.select("tooltip");
+
+    const mapShape = svg.append("path").attr('class', 'map');
+
     function map() {
         d3.selectAll('text.location').transition().attr("opacity", 0);
         polygons.transition().attr("opacity", 0);
-        d3.selectAll('circle.mapPoint').transition().attr("opacity", 0.8);
+        d3.selectAll('circle.mapPoint').transition().attr("display", "block");
+
 
         d3.json("./pec.json").then((mapData) => {
 
@@ -128,7 +133,7 @@ d3.json('./data.json').then((data) => {
                 .translate([width / 2, height / 4]);
 
 
-            svg.append("path")
+            mapShape
                 .datum(topojson.feature(mapData, mapData.objects.gcd_000b11a_e))
                 .attr("d", d3.geoPath().projection(projection))
                 .transition()
@@ -137,24 +142,46 @@ d3.json('./data.json').then((data) => {
                 .attr("stroke", "black")
                 .attr("stroke-width", 0.5)
                 .attr("fill", "none")
-                .attr("opacity", 1)
-                .attr('class', 'map');
+                .attr("opacity", 1);
 
             const mapPointData = data.map(({ quilts }) => quilts).flat().filter(({ location }) => location != null);
 
-            svg.selectAll("circle.mapPoint")
+            const circles = svg.selectAll("circle.mapPoint")
                 .data(mapPointData)
                 .enter()
-                .append("circle")
-                .attr("cx", d => { return projection(d.location)[0] })
-                .attr("cy", d => { return projection(d.location)[1] })
+                .append("circle");
+
+            circles
+                .attr("cx", d => projection(d.location)[0])
+                .attr("cy", d => projection(d.location)[1])
                 .transition()
                 .duration(600)
                 .ease(d3.easeLinear)
                 .attr("opacity", 0.8)
-                .attr("r", 2)
+                .attr("r", 3)
                 .attr("fill", "rgb(175, 78, 87)")
                 .attr('class', 'mapPoint')
+
+
+            const offset = window.innerWidth < 650 ? 340 : 150;
+
+
+            circles
+                .on('mouseenter', (event, d) => {
+                    d3.select("#tooltip")
+                        .style('display', 'block')
+                        .style('opacity', 1)
+                        .style('top', `${event.y - offset}px`)
+                        .style('left', `${event.x}px`)
+                        .text(d.name);
+                })
+                .on('mouseleave', () => {
+                    d3.select("#tooltip")
+                        .transition()
+                        .style('opacity', 0)
+                        .style('display', 'none')
+                });
+
 
         });
     }
@@ -268,7 +295,7 @@ d3.json('./data.json').then((data) => {
     const barChart = () => {
 
         d3.selectAll('path.map').transition().attr("opacity", 0);
-        d3.selectAll('circle.mapPoint').transition().attr("opacity", 0);
+        d3.selectAll('circle.mapPoint').transition().attr("display", 'none');
 
         polygons
             .attr("rx", 0)

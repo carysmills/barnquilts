@@ -321,36 +321,35 @@
       "location": "W of Bloomfield",
       "quilts": [
          {
-            "name": "",
-            "location": ""
+            "name": "Abstraction 1"
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Four Winds",
+            "location": [-77.24460686649779, 43.984766050452684]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Log Cabin 2",
+            "location": [-77.24462588710676, 43.98416319373961]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Stars on Ice 1",
+            "location": [-77.2471095159421, 43.98356727553053]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Stars on Ice 2",
+            "location": [-77.2471095159421, 43.98356727553053]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Windmill",
+            "location": [-77.29219658895495, 43.96201896740525]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Parksview Farm",
+            "location": [-77.29219658895495, 43.96201896740525]
          },
          {
-            "name": "",
-            "location": ""
+            "name": "Family Quilt",
+            "location": [-77.30508370429638, 43.96035304162029]
          }
       ]
    },
@@ -358,95 +357,95 @@
       "location": "W of Wellington",
       "quilts": [
          {
-            "name": "",
+            "name": "Schoolhouse Basketry",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Misty Morning Pond",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Merchant’s Mill Crazy Quilt",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Flight of the Consecon Swans",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Pride of Estonia",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Tree Enpoint with Maple Leaf",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Loose Leaf",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Shooting Star",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Mom’s Quilt",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Four Trilliums",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Vashti’s Tumbling Blocks",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #1",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #2",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #3",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #4",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #5",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Sandbank Estate Winery #6",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Honey House Bees",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Lavender Rainbow",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Lavender Rainbow",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Lavender Flowers",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Lacey’s Compass Star",
             "location": ""
          },
          {
-            "name": "",
+            "name": "Irish Eyes",
             "location": ""
          }
       ]

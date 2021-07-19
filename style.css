@@ -47,6 +47,21 @@ text {
     min-height: calc(100% - 100px);
 }
 
+#tooltip {
+    position: absolute;
+    background: white;
+    transition: top 0.3s, left 0.3s;
+    font-size: 12px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    opacity: 0;
+    transition: stroke 0.3s;
+}
+
+.mapPoint:hover {
+    stroke: black;
+}
+
 @media(max-width: 650px) {
     .textContainer {
         margin-top: 0;
