@@ -232,51 +232,87 @@
       "quilts": [
          {
             "name": "Rooks & Grapes",
-            "location": [-77.16638578313044, 43.9990919248375]
+            "location": [
+               -77.16638578313044,
+               43.9990919248375
+            ]
          },
          {
             "name": "Garden Wreath",
-            "location": [-77.17881193128316, 43.99383411182666]
+            "location": [
+               -77.17881193128316,
+               43.99383411182666
+            ]
          },
          {
             "name": "Steps to the Courthouse",
-            "location": [-77.17881193128316, 43.99383411182666]
+            "location": [
+               -77.17881193128316,
+               43.99383411182666
+            ]
          },
          {
             "name": "Turkey Tracks",
-            "location":  [-77.17881193128316, 43.99383411182666]
+            "location": [
+               -77.17881193128316,
+               43.99383411182666
+            ]
          },
          {
             "name": "Caring Star",
-            "location": [-77.18102406011846, 43.99434852905469]
+            "location": [
+               -77.18102406011846,
+               43.99434852905469
+            ]
          },
          {
             "name": "Anniversary Quilt",
-            "location": [-77.18286518710637, 43.994000592960376]
+            "location": [
+               -77.18286518710637,
+               43.994000592960376
+            ]
          },
          {
             "name": "Harvest Basket",
-            "location": [-77.18286518710637, 43.994000592960376]
+            "location": [
+               -77.18286518710637,
+               43.994000592960376
+            ]
          },
          {
             "name": "Crowns and Star",
-            "location": [-77.18286518710637, 43.994000592960376]
+            "location": [
+               -77.18286518710637,
+               43.994000592960376
+            ]
          },
          {
             "name": "Four–Eight Point Stars",
-            "location": [-77.18286518710637, 43.994000592960376]
+            "location": [
+               -77.18286518710637,
+               43.994000592960376
+            ]
          },
          {
             "name": "Log Cabin Maple Leaf",
-            "location": [-77.18286518710637, 43.994000592960376]
+            "location": [
+               -77.18286518710637,
+               43.994000592960376
+            ]
          },
          {
             "name": "Log Cabin 1",
-            "location": [-77.1891137024479, 43.99210302190237]
+            "location": [
+               -77.1891137024479,
+               43.99210302190237
+            ]
          },
          {
             "name": "Swirling Star",
-            "location": [ -77.20430344662475, 43.988788200267315]
+            "location": [
+               -77.20430344662475,
+               43.988788200267315
+            ]
          }
       ]
    },
@@ -285,15 +321,24 @@
       "quilts": [
          {
             "name": "Log Cabin 3",
-            "location": [-77.20981531594221, 43.98088762195096]
+            "location": [
+               -77.20981531594221,
+               43.98088762195096
+            ]
          },
          {
             "name": "Hole in the Barn Door",
-            "location": [-77.20981531594221, 43.98088762195096]
+            "location": [
+               -77.20981531594221,
+               43.98088762195096
+            ]
          },
          {
             "name": "Williams Star",
-            "location": [-77.21428617546043, 43.97892224893514]
+            "location": [
+               -77.21428617546043,
+               43.97892224893514
+            ]
          },
          {
             "name": "McCool’s Pin Wheel"
@@ -306,14 +351,20 @@
          },
          {
             "name": "Mariners Compass Rose",
-            "location": [-77.27605707546196, 43.93205623596973]
+            "location": [
+               -77.27605707546196,
+               43.93205623596973
+            ]
          },
          {
             "name": "Rose’s Starlight"
          },
          {
             "name": "Circle of Geese",
-            "location": [-77.21860423128443, 43.95633704633331]
+            "location": [
+               -77.21860423128443,
+               43.95633704633331
+            ]
          }
       ]
    },
@@ -325,31 +376,52 @@
          },
          {
             "name": "Four Winds",
-            "location": [-77.24460686649779, 43.984766050452684]
+            "location": [
+               -77.24460686649779,
+               43.984766050452684
+            ]
          },
          {
             "name": "Log Cabin 2",
-            "location": [-77.24462588710676, 43.98416319373961]
+            "location": [
+               -77.24462588710676,
+               43.98416319373961
+            ]
          },
          {
             "name": "Stars on Ice 1",
-            "location": [-77.2471095159421, 43.98356727553053]
+            "location": [
+               -77.2471095159421,
+               43.98356727553053
+            ]
          },
          {
             "name": "Stars on Ice 2",
-            "location": [-77.2471095159421, 43.98356727553053]
+            "location": [
+               -77.2471095159421,
+               43.98356727553053
+            ]
          },
          {
             "name": "Windmill",
-            "location": [-77.29219658895495, 43.96201896740525]
+            "location": [
+               -77.29219658895495,
+               43.96201896740525
+            ]
          },
          {
             "name": "Parksview Farm",
-            "location": [-77.29219658895495, 43.96201896740525]
+            "location": [
+               -77.29219658895495,
+               43.96201896740525
+            ]
          },
          {
             "name": "Family Quilt",
-            "location": [-77.30508370429638, 43.96035304162029]
+            "location": [
+               -77.30508370429638,
+               43.96035304162029
+            ]
          }
       ]
    },
@@ -357,96 +429,73 @@
       "location": "W of Wellington",
       "quilts": [
          {
-            "name": "Schoolhouse Basketry",
-            "location": ""
+            "name": "Schoolhouse Basketry"
          },
          {
-            "name": "Misty Morning Pond",
-            "location": ""
+            "name": "Misty Morning Pond"
          },
          {
-            "name": "Merchant’s Mill Crazy Quilt",
-            "location": ""
+            "name": "Merchant’s Mill Crazy Quilt"
          },
          {
-            "name": "Flight of the Consecon Swans",
-            "location": ""
+            "name": "Flight of the Consecon Swans"
          },
          {
-            "name": "Pride of Estonia",
-            "location": ""
+            "name": "Pride of Estonia"
          },
          {
-            "name": "Tree Enpoint with Maple Leaf",
-            "location": ""
+            "name": "Tree Enpoint with Maple Leaf"
          },
          {
-            "name": "Loose Leaf",
-            "location": ""
+            "name": "Loose Leaf"
          },
          {
-            "name": "Shooting Star",
-            "location": ""
+            "name": "Shooting Star"
          },
          {
-            "name": "Mom’s Quilt",
-            "location": ""
+            "name": "Mom’s Quilt"
          },
          {
-            "name": "Four Trilliums",
-            "location": ""
+            "name": "Four Trilliums"
          },
          {
-            "name": "Vashti’s Tumbling Blocks",
-            "location": ""
+            "name": "Vashti’s Tumbling Blocks"
          },
          {
-            "name": "Sandbank Estate Winery #1",
-            "location": ""
+            "name": "Sandbank Estate Winery #1"
          },
          {
-            "name": "Sandbank Estate Winery #2",
-            "location": ""
+            "name": "Sandbank Estate Winery #2"
          },
          {
-            "name": "Sandbank Estate Winery #3",
-            "location": ""
+            "name": "Sandbank Estate Winery #3"
          },
          {
-            "name": "Sandbank Estate Winery #4",
-            "location": ""
+            "name": "Sandbank Estate Winery #4"
          },
          {
-            "name": "Sandbank Estate Winery #5",
-            "location": ""
+            "name": "Sandbank Estate Winery #5"
          },
          {
-            "name": "Sandbank Estate Winery #6",
-            "location": ""
+            "name": "Sandbank Estate Winery #6"
          },
          {
-            "name": "Honey House Bees",
-            "location": ""
+            "name": "Honey House Bees"
          },
          {
-            "name": "Lavender Rainbow",
-            "location": ""
+            "name": "Lavender Rainbow"
          },
          {
-            "name": "Lavender Rainbow",
-            "location": ""
+            "name": "Lavender Rainbow"
          },
          {
-            "name": "Lavender Flowers",
-            "location": ""
+            "name": "Lavender Flowers"
          },
          {
-            "name": "Lacey’s Compass Star",
-            "location": ""
+            "name": "Lacey’s Compass Star"
          },
          {
-            "name": "Irish Eyes",
-            "location": ""
+            "name": "Irish Eyes"
          }
       ]
    },
@@ -454,68 +503,52 @@
       "location": "Hwy. 62",
       "quilts": [
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          }
       ]
    },
@@ -523,64 +556,49 @@
       "location": "Bloomfield",
       "quilts": [
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          }
       ]
    },
@@ -588,92 +606,70 @@
       "location": "Picton",
       "quilts": [
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          }
       ]
    },
@@ -681,104 +677,79 @@
       "location": "Wellington",
       "quilts": [
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          },
          {
-            "name": "",
-            "location": ""
+            "name": ""
          }
       ]
    }
