@@ -176,8 +176,8 @@ d3.json('./data.json').then((data) => {
                         .text(d.name);
                 })
                 .on('mouseleave', () => {
+                    
                     d3.select("#tooltip")
-                        .transition()
                         .style('opacity', 0)
                         .style('display', 'none')
                 });
