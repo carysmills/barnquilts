@@ -1,6 +1,9 @@
 const width = 320;
 const height = 500;
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const animationDuration = prefersReducedMotion ? 0 : 600;
+
 function calculateStarPoints(centerX, centerY, arms, outerRadius, innerRadius) {
     let results = "";
 
@@ -75,7 +78,6 @@ function getQuiltFill(index) {
 function getRowHeight(index) {
     const firstRow = [0, 3, 6, 9];
     const secondRow = [1, 4, 7, 10];
-    const thirdRow = [2, 5, 8, 11];
 
     if (firstRow.includes(index)) {
         return 50;
@@ -115,11 +117,17 @@ d3.json('./data.json').then((data) => {
 
     const svg = d3.select("svg");
 
-    const tooltip = d3.select("tooltip");
+    const title = svg.append('title');
 
     const mapShape = svg.append("path").attr('class', 'map');
 
     function map() {
+        const fixed = document.getElementById('fixed');
+        const content = document.getElementById('content4');
+        content.insertBefore(fixed, null);
+
+        title.text('Map of where barn quilts are in Prince Edward County.')
+
         d3.selectAll('text.location').transition().attr("opacity", 0);
         polygons.transition().attr("opacity", 0);
         d3.selectAll('circle.mapPoint').transition().attr("display", "block");
@@ -137,7 +145,7 @@ d3.json('./data.json').then((data) => {
                 .datum(topojson.feature(mapData, mapData.objects.gcd_000b11a_e))
                 .attr("d", d3.geoPath().projection(projection))
                 .transition()
-                .duration(600)
+                .duration(animationDuration)
                 .ease(d3.easeLinear)
                 .attr("stroke", "black")
                 .attr("stroke-width", 0.5)
@@ -155,7 +163,7 @@ d3.json('./data.json').then((data) => {
                 .attr("cx", d => projection(d.location)[0])
                 .attr("cy", d => projection(d.location)[1])
                 .transition()
-                .duration(600)
+                .duration(animationDuration)
                 .ease(d3.easeLinear)
                 .attr("opacity", 0.8)
                 .attr("r", 3)
@@ -215,6 +223,9 @@ d3.json('./data.json').then((data) => {
         .attr("dx", -500);
 
     const quilt = () => {
+
+        title.text('Representation of barn quilt with a geometric flower.')
+
         stem
             .attr("d", "M 304 280 C 209 248 206 244 183 182")
             .attr("fill", "none")
@@ -237,7 +248,7 @@ d3.json('./data.json').then((data) => {
         polygons
             .attr("fill", (_, i) => getQuiltFill(i))
             .transition()
-            .duration(600)
+            .duration(animationDuration)
             .ease(d3.easeElastic)
             .attr("opacity", 1)
             .attr("points", (_, i) => getQuiltPoints(i))
@@ -248,18 +259,25 @@ d3.json('./data.json').then((data) => {
 
 
     const divide = () => {
+
+        const fixed = document.getElementById('fixed');
+        const content = document.getElementById('content2');
+        content.insertBefore(fixed, null);
+        
+        title.text('Illustration of distribution of barn quilts. Most are in Wellington.')
+
         stem
             .transition()
-            .duration(600).attr("opacity", 0);
+            .duration(animationDuration).attr("opacity", 0);
 
         quiltContainer
             .transition()
-            .duration(600).attr("opacity", 0);
+            .duration(animationDuration).attr("opacity", 0);
 
         polygons
             .transition()
-            .delay((_, i) => 100 * i)
-            .duration(800)
+            .delay((_, i) => (prefersReducedMotion? 0 : 100 )* i)
+            .duration(animationDuration)
             .ease(d3.easeElastic)
             .attr("points", (d, i) => getDividedPoints(d, i))
             .attr("fill", (d) => myColor(d.quilts.length))
@@ -267,7 +285,7 @@ d3.json('./data.json').then((data) => {
         d3.selectAll('text.location')
             .attr("opacity", 1)
             .transition()
-            .duration(600)
+            .duration(animationDuration)
             .attr("text-anchor", "middle")
             .attr("dx", (_, index) => getRowWidth(index))
             .attr("dy", (_, index) => getRowHeight(index) - 25)
@@ -294,6 +312,13 @@ d3.json('./data.json').then((data) => {
 
     const barChart = () => {
 
+        title.text('Bar chart showing the most barn quilts are in Wellington.');
+
+        const fixed = document.getElementById('fixed');
+        const content = document.getElementById('content3');
+        content.insertBefore(fixed, null);
+
+
         d3.selectAll('path.map').transition().attr("opacity", 0);
         d3.selectAll('circle.mapPoint').transition().attr("display", 'none');
 
@@ -301,8 +326,8 @@ d3.json('./data.json').then((data) => {
             .attr("rx", 0)
             .attr("ry", 0)
             .transition()
-            .delay((_, i) => 20 * i)
-            .duration(600)
+            .delay((_, i) => (prefersReducedMotion? 0 : 20) * i)
+            .duration(animationDuration)
             .attr("opacity", 1)
             .attr("points", (d, i) => getBarChartPoints(d, i))
 
@@ -310,8 +335,8 @@ d3.json('./data.json').then((data) => {
 
         d3.selectAll('text.location')
             .transition()
-            .delay((_, i) => 20 * i)
-            .duration(600)
+            .delay((_, i) => (prefersReducedMotion? 0 : 20) * i)
+            .duration(animationDuration)
             .attr("opacity", 1)
             .attr("text-anchor", "end")
             .attr("dx", 140)

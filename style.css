@@ -6,6 +6,12 @@ body {
     background: whitesmoke;
 }
 
+@media (prefers-reduced-motion) {
+    html, body {
+      scroll-behavior: unset;
+    }
+  }
+
 h1 {
     font-family: 'Uchen', serif;
     line-height: 1;
@@ -37,10 +43,12 @@ text {
     padding: 0 45px;
 }
 
-.fixed {
+#fixed {
     position: fixed;
     height: 500px;
     top: 100px;
+    z-index: 1;
+    left: 0;
 }
 
 #content4 {
