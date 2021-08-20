@@ -38,7 +38,7 @@ text {
     text-align: right;
 }
 
-.textContainer div {
+.content {
     min-height: 100%;
     padding: 0 45px;
 }
@@ -80,11 +80,11 @@ text {
         text-align: center;
     }
 
-    .textContainer div {
+    .content {
         height: 800px;
     }
 
-    .fixed {
+    #fixed {
         width: 100%;
         top: 300px;
         background: whitesmoke;
